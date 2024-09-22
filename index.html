@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculacora sencilla</title>
+</head>
+<body>
+
+<h2>CALCULADOR WEB</h2><br><br>
+
+    <form method="post" action="./calculadora.php">
+
+        <label for="number1">Introduce el primer número</label>
+        <input type="number" id="number1" name="number1"><br><br>
+
+        <label for="number2">Introduce el segundo número</label>
+        <input type="number" id="number2" name="number2"><br><br>
+
+    <!-- Botones para cada operación -->
+        <button type="submit" name="submit" value="suma">Sumar</button>
+        <button type="submit" name="submit" value="resta">Resta</button><br><br>
+
+        <label for="result">El resultado de la operación es: </label>
+        <input type="text" id="result" name="result" value="">
+    </form>
+</body>
+</html>
