@@ -9,17 +9,24 @@ if(isset($_POST['submit'])){ //Si se ha apretado el botón de enviar
 
     $total = ""; //Declaro antes la operación, lo hago a string ya que para este ejecicio es suficiente.
 
+    if($num1 == null || $num2 == null){
 
-    switch($operacion){
+        echo "No has introducido todos los valores, tira atrás...";
 
-        case "suma":
-            $total = $num1 + $num2;
-            break;
-        case "resta":
-            $total = $num1 - $num2;
-            break;
+    }else{
 
+        switch($operacion){
+
+            case "suma":
+                $total = $num1 + $num2;
+                break;
+            case "resta":
+                $total = $num1 - $num2;
+                break;
+    
+        }
     }
+
 
     echo "El resultado es: ".$total;
 
