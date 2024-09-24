@@ -1,11 +1,11 @@
 <?php
 
-if(isset($_POST['submit'])){ //Si se ha apretado el botón de enviar
+if(isset($_POST['operacion'])){ //Si se ha apretado el botón de enviar
 
     $num1 = $_POST['number1'];
     $num2 = $_POST['number2'];
 
-    $operacion = $_POST['submit'];
+    $operacion = $_POST['operacion'];
 
     $total = ""; //Declaro antes la operación, lo hago a string ya que para este ejecicio es suficiente.
 
