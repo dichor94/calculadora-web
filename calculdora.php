@@ -1,44 +1,35 @@
 <?php
 
-if(isset($_POST['operacion'])){ //Si se ha apretado el botón de enviar
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if(isset($_POST['operacion'])){
+        $number1 = $_POST['number1'];
+        $number2 = $_POST['number2'];
+        $operacion = $_POST['operacion'];
 
-    $num1 = $_POST['number1'];
-    $num2 = $_POST['number2'];
+        $result = '';
 
-    $operacion = $_POST['operacion'];
-
-    $total = ""; //Declaro antes la operación, lo hago a string ya que para este ejecicio es suficiente.
-
-    if($num1 == null || $num2 == null){
-
-        echo "No has introducido todos los valores, tira atrás...";
-
-    }else{
-
-        switch($operacion){
-
-            case "suma":
-                $total = $num1 + $num2;
+        switch ($operacion) {
+            case 'multiplicacion':
+                $result = $number1* $number2;
                 break;
-            case "resta":
-                $total = $num1 - $num2;
+            case 'division':
+                if ($number2 != 0) {
+                    $result = $number1/$number2;
+                } else {
+                    $result = "Error. No se puede dividir entre 0";
+                }
                 break;
-    
+            case 'suma':
+                $result = $number1 + $number2;
+                break;
+            case 'resta':
+                $result = $number1 - $number2;
+            default:
+                $result = "Operación no válida";
+                break;
         }
     }
-
-
-    echo "El resultado es: ".$total;
-
+    echo "El resultado de la $operacion es: $result";
 }
-
-
-
-
-
-
-
-
-
 
 ?>
