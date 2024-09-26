@@ -24,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 break;
             case 'resta':
                 $result = $number1 - $number2;
+                break;
             default:
                 $result = "Operación no válida";
                 break;
